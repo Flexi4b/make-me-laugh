@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bombo : MonoBehaviour
@@ -29,13 +31,24 @@ public class Bombo : MonoBehaviour
 
     // UI Related
 
-    [SerializeField] private TextMeshProUGUI _bombTimerVisual;
+    [SerializeField] private TextMeshProUGUI _bombTimerText;
+
+    // GameObjects
+
+    [SerializeField] private GameObject _bombTimerVisual;
+
+    // Misc
+
+    private IEnumerator _activeCoroutine;
 
     void Start()
     {
         _timer = _selectedBombTime;
         _minutes = _timer / 60;
         _audioSource.clip = _bombTick;
+        _bombTimerText.text = "0" + _minutes.ToString("F0") + ":" + _seconds.ToString("F0");
+        _BombIsActive = true;
+        //Time.timeScale = 2f;
     }
 
     
@@ -51,6 +64,11 @@ public class Bombo : MonoBehaviour
             _BombIsActive = false;
             StartCoroutine(BombDefused());
         }
+        if (_activeCoroutine != null) 
+        {
+            StartCoroutine(_activeCoroutine);
+            _activeCoroutine = null;
+        }
     }
 
 
@@ -60,25 +78,53 @@ public class Bombo : MonoBehaviour
         {
             _timer -= Time.deltaTime;
             _seconds -= Time.deltaTime;
+
+            // Makes the bomb display the time visually correct
+            if (_seconds >= 10)
+            {
+                _bombTimerText.text = "0" + _minutes.ToString("F0") + ":" + _seconds.ToString("F0");
+            }
+            else if (_seconds < 9)
+            {
+                _bombTimerText.text = "0" + _minutes.ToString("F0") + ":0" + _seconds.ToString("F0");
+            }
+
             if (_seconds <= 0)
             {
-                _seconds = 60;
+                _minutes -= 1;
+                _audioSource.Play();
+                _seconds = 59;
             }
         }
 
         if (_timer <= 0)
         {
-            StartCoroutine(BombExplodes());
+            _activeCoroutine = BombExplodes();
+            _BombIsActive = false;
         }
-    }
-
-    private void TimerDisplay()
-    {
-
     }
 
     private IEnumerator BombExplodes()
     {
+        int repeats = 3;
+
+        _audioSource.clip = _timerExpired;
+        _audioSource.Play();
+        _bombTimerText.text = "XX:XX";
+
+        //I would have used a for loop if they worked
+        _bombTimerVisual.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
+        _bombTimerVisual.SetActive(true);
+        _bombTimerVisual.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
+        _bombTimerVisual.SetActive(true);
+        _bombTimerVisual.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
+        _bombTimerVisual.SetActive(true);
+
+
+        Debug.Log("you fucking suck at this game");
         yield return null;
     }
 
