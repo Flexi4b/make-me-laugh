@@ -98,7 +98,7 @@ public class Bombo : MonoBehaviour
             }
         }
 
-        if (_timer <= 0)
+        if (_timer <= 1)
         {
             _activeCoroutine = BombExplodes();
             _BombIsActive = false;
