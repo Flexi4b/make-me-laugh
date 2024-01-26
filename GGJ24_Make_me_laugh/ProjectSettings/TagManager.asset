@@ -14,6 +14,7 @@ TagManager:
   - Spigot3
   - Spigot4
   - Spigot5
+  - VerifyButton
   layers:
   - Default
   - TransparentFX

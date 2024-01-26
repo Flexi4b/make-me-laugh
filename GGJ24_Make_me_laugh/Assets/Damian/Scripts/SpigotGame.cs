@@ -15,11 +15,13 @@ public class SpigotGame : MonoBehaviour
     [SerializeField] private SpriteRenderer _numberShower;
 
 
-    private bool PuzzleSolved;
+    // Audio Related
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _Buzzers;
 
     // The singular color i had to add myself
 
-    private Color pink = new Color(255, 79, 255);
+    private bool _interractable = true;
 
     void Start()
     {
@@ -31,7 +33,8 @@ public class SpigotGame : MonoBehaviour
     {
 
         OnMouseClick();
-        SpigotSolutions();
+        //SpigotSolutions();
+
 
         for (int i = 0; i < _spigotSprites.Length; i++)
         {
@@ -59,10 +62,6 @@ public class SpigotGame : MonoBehaviour
                 {
                     OnHitSpigot(hit.transform.gameObject);
                 }
-                else
-                {
-
-                }
             }
         }
     }
@@ -74,11 +73,13 @@ public class SpigotGame : MonoBehaviour
         {  THE CORRECT BUILDINDEX HAS TO GO HERE
         */
 
+        if (_interractable)
+        {
             if (hitSpiggot.CompareTag("Spigot0"))
             {
                 _notch[0] = !_notch[0];
             }
-        
+
             if (hitSpiggot.CompareTag("Spigot1"))
             {
                 _notch[1] = !_notch[1];
@@ -99,20 +100,34 @@ public class SpigotGame : MonoBehaviour
             {
                 _notch[5] = !_notch[5];
             }
-    }
 
-    private void SpigotSolutions()
-    {
-         if (_notch[0] == true && _notch[1] == true && _notch[2] == true && _notch[3] == false && _notch[4] == true && _notch[5] == false)
-        {
-            StartCoroutine(FinishSpigot());
+            if (hitSpiggot.CompareTag("VerifyButton"))
+            {
+                if (_notch[0] == true && _notch[1] == true && _notch[2] == true && _notch[3] == false && _notch[4] == true && _notch[5] == false)
+                {
+                    StartCoroutine(FinishSpigot());
+                }
+                else
+                {
+                    _audioSource.clip = _Buzzers[0];
+                    _audioSource.Play();
+                    for (int i = 0; i < _notch.Length; i++)
+                    {
+                        _notch[i] = false;
+                    }
+                }
+            }
         }
 
+            
     }
 
     private IEnumerator FinishSpigot()
     {
+        _interractable = false;
         _numberShower.sprite = _numberToReplace;
+        _audioSource.clip = _Buzzers[1];
+        _audioSource.Play();
         yield break;
     }
 }
