@@ -7,6 +7,7 @@ public class CameraTurning : MonoBehaviour
    private readonly float rotationSpeed = 2.75f;
    private bool stopInput;
    private float waitTime;
+   [SerializeField] float cameraDelay;
    private void Update()
    {
       if (Input.GetKeyDown(KeyCode.D) && stopInput == false)
@@ -26,7 +27,7 @@ public class CameraTurning : MonoBehaviour
          waitTime += Time.deltaTime;
       }
       
-      if (waitTime >= 1.5f)
+      if (waitTime >= cameraDelay)
       {
          stopInput = false;
          waitTime = 0;

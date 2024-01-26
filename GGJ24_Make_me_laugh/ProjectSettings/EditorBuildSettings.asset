@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Fabian_Scenes/Fabian_Main_Room.unity
+    path: Assets/Thierry/Scenes/MainMenu.unity
+    guid: dd5400063ca309e4d8277b7a934f15a4
+  - enabled: 1
+    path: Assets/Fabian/Scenes/Fabian_Main_Room.unity
     guid: 29316e60e38639041918b3ffa283c1cc
   - enabled: 1
-    path: Assets/Scenes/Fabian_Scenes/Fabian_Room_1.unity
-    guid: aa5a016cd3aacd543b1116d7d531a55a
+    path: Assets/Fabian/Scenes/Fabian_Room_1.unity
+    guid: 6441461ca5270504499c8e41dd4daaaa
   m_configObjects: {}
