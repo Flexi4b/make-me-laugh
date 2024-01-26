@@ -65,11 +65,19 @@ public class CodeImput : MonoBehaviour
         if (gameObject.CompareTag("ButtonUp2"))
         {
             numbercodeslot4++;
+            if (numbercodeslot4 > 9)
+            {
+                numbercodeslot4 = 0;
+            }
             numberslottext4.SetText(numbercodeslot4.ToString());
         }
         if (gameObject.CompareTag("ButtonUp3"))
         {
             numbercodeslot5++;
+            if (numbercodeslot5 > 9)
+            {
+                numbercodeslot5 = 0;
+            }
             numberslottext5.SetText(numbercodeslot5.ToString());
         }
 
@@ -85,11 +93,19 @@ public class CodeImput : MonoBehaviour
         if (gameObject.CompareTag("ButtonDown2"))
         {
             numbercodeslot4--;
+            if (numbercodeslot4 < 0)
+            {
+                numbercodeslot4 = 9;
+            }
             numberslottext4.SetText(numbercodeslot4.ToString());
         }
         if (gameObject.CompareTag("ButtonDown3"))
         {
             numbercodeslot5--;
+            if (numbercodeslot5 < 0)
+            {
+                numbercodeslot5 = 9;
+            }
             numberslottext5.SetText(numbercodeslot5.ToString());
         }
 
