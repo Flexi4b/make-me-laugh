@@ -1,15 +1,35 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraTurning : MonoBehaviour
 {
    private readonly float rotationSpeed = 2.75f;
-
+   private bool stopInput;
+   private float waitTime;
    private void Update()
    {
-      if (Input.GetKeyDown(KeyCode.A)|| Input.GetKeyDown(KeyCode.D))
+      if (Input.GetKeyDown(KeyCode.D) && stopInput == false)
       {
-         RotateCamera(90f);   
+         RotateCamera(90f);
+         stopInput = true;
+      }
+
+      if (Input.GetKeyDown(KeyCode.A) &&  stopInput == false)
+      {
+         RotateCamera(-90f);
+         stopInput = true;
+      }
+
+      if (stopInput == true)
+      {
+         waitTime += Time.deltaTime;
+      }
+      
+      if (waitTime >= 3)
+      {
+         stopInput = false;
+         waitTime = 0;
       }
    }
 
