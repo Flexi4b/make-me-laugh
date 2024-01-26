@@ -26,7 +26,7 @@ public class CameraTurning : MonoBehaviour
          waitTime += Time.deltaTime;
       }
       
-      if (waitTime >= 3)
+      if (waitTime >= 1.5f)
       {
          stopInput = false;
          waitTime = 0;
