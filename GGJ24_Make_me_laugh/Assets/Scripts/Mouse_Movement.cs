@@ -1,19 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Mouse_Movement : MonoBehaviour
 {
+    public static Mouse_Movement _mouseMovement;
+
+    private void Start()
+    {
+        _mouseMovement = this;
+    }
 
     void Update()
     {
         OnMouseClick();
-        
     }
 
-    private void OnMouseClick()
+    public void OnMouseClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
