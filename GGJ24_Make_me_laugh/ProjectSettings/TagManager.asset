@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Door
+  - NorthDoor
+  - SouthDoor
+  - WestDoor
+  - EastDoor
   layers:
   - Default
   - TransparentFX
