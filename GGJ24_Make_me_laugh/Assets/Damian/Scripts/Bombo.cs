@@ -4,6 +4,7 @@ using System.ComponentModel;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Bombo : MonoBehaviour
 {
@@ -106,30 +107,36 @@ public class Bombo : MonoBehaviour
 
     private IEnumerator BombExplodes()
     {
-        int repeats = 3;
+        int repeats = 4;
 
         _audioSource.clip = _timerExpired;
         _audioSource.Play();
         _bombTimerText.text = "XX:XX";
 
-        //I would have used a for loop if they worked
-        _bombTimerVisual.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
-        _bombTimerVisual.SetActive(true);
-        _bombTimerVisual.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
-        _bombTimerVisual.SetActive(true);
-        _bombTimerVisual.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
-        _bombTimerVisual.SetActive(true);
-
-
+        for (int i = 0; i < repeats; i++)
+        {
+            _bombTimerVisual.SetActive(false);
+            yield return new WaitForSeconds(0.6f);
+            _bombTimerVisual.SetActive(true);
+            yield return new WaitForSeconds(0.6f);
+        }
         Debug.Log("you fucking suck at this game");
         yield return null;
     }
 
     private IEnumerator BombDefused()
     {
+        int repeats = 4;
+
+
+        for (int i = 0; i < repeats; i++)
+        {
+            _bombTimerVisual.SetActive(false);
+            yield return new WaitForSeconds(0.6f);
+            _bombTimerVisual.SetActive(true);
+            yield return new WaitForSeconds(0.6f);
+        }
+
         yield return null;
     }
 }
