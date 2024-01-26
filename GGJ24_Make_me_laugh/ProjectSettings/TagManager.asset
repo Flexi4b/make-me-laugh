@@ -8,6 +8,12 @@ TagManager:
   - SouthDoor
   - WestDoor
   - EastDoor
+  - Spigot0
+  - Spigot1
+  - Spigot2
+  - Spigot3
+  - Spigot4
+  - Spigot5
   layers:
   - Default
   - TransparentFX
