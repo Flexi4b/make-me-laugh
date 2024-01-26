@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,31 +10,16 @@ public class Mouse_Movement : MonoBehaviour
     void Update()
     {
         OnMouseClick();
+        
     }
-
-    //private void FixedUpdate()
-    //{
-    //    RaycastHit hit;
-
-    //    if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
-    //    {
-    //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-    //        Debug.Log(1);
-    //        if (hit.collider.gameObject.CompareTag("Door"))
-    //        {
-    //            Debug.Log(2);
-    //        }
-    //    }
-    //}
 
     private void OnMouseClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 100f))
+            if (Physics.Raycast(ray, out RaycastHit hit, 100f))
             {
                 if (hit.transform != null)
                 {
@@ -45,9 +31,32 @@ public class Mouse_Movement : MonoBehaviour
 
     private void SelectedObject(GameObject gameObject)
     {
-        if (gameObject.CompareTag("Door"))
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            SceneManager.LoadScene(1);
+            if (gameObject.CompareTag("NorthDoor"))
+            {
+                SceneManager.LoadScene(1);
+            }
+            else if (gameObject.CompareTag("EastDoor"))
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (gameObject.CompareTag("SouthDoor"))
+            {
+                SceneManager.LoadScene(3);
+            }
+            else if (gameObject.CompareTag("WestDoor"))
+            {
+                SceneManager.LoadScene(4);
+            }
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (gameObject.CompareTag(""))
+            {
+                //functie met dingen die het moet doen met klik
+            }
         }
     }
 }
