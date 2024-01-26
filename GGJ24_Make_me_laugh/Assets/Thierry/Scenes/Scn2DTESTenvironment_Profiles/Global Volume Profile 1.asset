@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.57
+    value: 0.109
   size:
     overrideState: 1
     value: 0.88
@@ -57,13 +57,13 @@ MonoBehaviour:
     overrideState: 1
     value: 0.42
   smoothness:
-    overrideState: 0
-    value: 0.2
-  roundness:
-    overrideState: 0
+    overrideState: 1
     value: 1
+  roundness:
+    overrideState: 1
+    value: 0.789
   rounded:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mask:
     overrideState: 0

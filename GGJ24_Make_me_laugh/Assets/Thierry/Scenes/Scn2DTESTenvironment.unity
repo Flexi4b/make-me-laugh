@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8827defff587d80409251b38d3270dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDelay: 0.65
+  cameraDelay: 0.75
 --- !u!114 &64512891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64512886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -336,7 +336,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.68, y: 4.62}
+    oldSize: {x: 9.74, y: 9.65}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -938,27 +938,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6034661896301345700, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
       propertyPath: m_Name
-      value: Placeholder Button
+      value: Bomb
       objectReference: {fileID: 0}
     - target: {fileID: 7089161477483405637, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3393965
+      value: 2.1823623
       objectReference: {fileID: 0}
     - target: {fileID: 7089161477483405637, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.3393965
+      value: 2.1823623
       objectReference: {fileID: 0}
     - target: {fileID: 7089161477483405637, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.3393965
+      value: 2.1823623
       objectReference: {fileID: 0}
     - target: {fileID: 7089161477483405637, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.68
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 7089161477483405637, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 7089161477483405637, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
       propertyPath: m_LocalPosition.z
@@ -995,7 +995,7 @@ PrefabInstance:
     - target: {fileID: 7797889967992443109, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 52895cfeb3c468c4dbab6aeac1f0963b, type: 3}
+      objectReference: {fileID: 21300000, guid: 84c8e8e99a79a8142afbbb8c9bc7d3d1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
