@@ -4,19 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class Mouse_Movement : MonoBehaviour
 {
-    public static Mouse_Movement _mouseMovement;
-
-    private void Start()
-    {
-        _mouseMovement = this;
-    }
-
     void Update()
     {
         OnMouseClick();
     }
 
-    public void OnMouseClick()
+    private void OnMouseClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
