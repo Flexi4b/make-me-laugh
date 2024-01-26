@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Mouse_Movement : MonoBehaviour
 {
+    private Trow_Ball _trowBall;
+
+    private void Start()
+    {
+        _trowBall = FindObjectOfType<Trow_Ball>();
+    }
 
     void Update()
     {
@@ -53,9 +59,9 @@ public class Mouse_Movement : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            if (gameObject.CompareTag(""))
+            if (gameObject.CompareTag("Obstacle"))
             {
-                //functie met dingen die het moet doen met klik
+                _trowBall.GoBall();
             }
         }
     }
