@@ -6,10 +6,16 @@ using UnityEngine;
 
 public class CodeImput : MonoBehaviour
 {
+    private int numbercodeslot0;
+    private int numbercodeslot1;
+    private int numbercodeslot2;
     private int numbercodeslot3;
     private int numbercodeslot4;
     private int numbercodeslot5;
 
+   [SerializeField] private TextMeshPro numberslottext0;
+   [SerializeField] private TextMeshPro numberslottext1;
+   [SerializeField] private TextMeshPro numberslottext2;
    [SerializeField] private TextMeshPro numberslottext3;
    [SerializeField] private TextMeshPro numberslottext4;
    [SerializeField] private TextMeshPro numberslottext5;
@@ -127,7 +133,7 @@ public class CodeImput : MonoBehaviour
         else
         {
             Debug.Log("WRONG");
-            //inputCode.text = "";
+            inputCode.text = "";
         }
         yield break;
     }
