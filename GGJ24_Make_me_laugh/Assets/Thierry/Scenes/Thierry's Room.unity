@@ -5653,6 +5653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 1672801223726123464, guid: d9e609327dc405749afdcd65f2a4aa06, type: 3}
+      propertyPath: m_TagString
+      value: SouthDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 6094187602448970320, guid: d9e609327dc405749afdcd65f2a4aa06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8
