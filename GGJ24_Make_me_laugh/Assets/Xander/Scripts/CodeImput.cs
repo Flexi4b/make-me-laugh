@@ -32,6 +32,7 @@ public class CodeImput : MonoBehaviour
     private void Start()
     {
         bombo = FindObjectOfType<Bombo>();
+        roomMasterScript = FindObjectOfType<RoomMasterScript>();
         numberslottext3.SetText("0");
         numberslottext4.SetText("0");
         numberslottext5.SetText("0");
