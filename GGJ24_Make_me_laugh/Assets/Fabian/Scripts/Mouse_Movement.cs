@@ -36,10 +36,9 @@ public class Mouse_Movement : MonoBehaviour
         {
             if (gameObject.CompareTag("NorthDoor"))
             {
-                if (roomMasterScript.room1Clear == false)
-                {
-                    SceneManager.LoadScene(2);
-                }
+             
+            SceneManager.LoadScene(2);
+                
             }
             else if (gameObject.CompareTag("EastDoor"))
             {
@@ -62,18 +61,32 @@ public class Mouse_Movement : MonoBehaviour
                 SceneManager.LoadScene(1);
             }
         }
-        
-        if (SceneManager.GetActiveScene().buildIndex == 4)
+        if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            if (gameObject.CompareTag("ChefsKnife"))
+            if (gameObject.CompareTag("NorthDoor"))
             {
-                keysCollected++;
-                Destroy(gameObject);
-                if (keysCollected >= 3)
+                SceneManager.LoadScene(1);
+            }
+        }
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                if (gameObject.CompareTag("ChefsKnife"))
                 {
-                    roomMasterScript.room2Clear = true;
+                    keysCollected++;
+                    Destroy(gameObject);
+                    if (keysCollected >= 3)
+                    {
+                        roomMasterScript.room2Clear = true;
+                    }
+                }
+
+                if (gameObject.CompareTag("NorthDoor"))
+                {
+                    SceneManager.LoadScene(1);
                 }
             }
+                
         }
     }
 }

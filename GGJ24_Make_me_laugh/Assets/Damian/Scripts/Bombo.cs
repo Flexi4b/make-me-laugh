@@ -95,7 +95,8 @@ public class Bombo : MonoBehaviour
             if (_seconds <= 0)
             {
                 _minutes -= 1;
-                _audioSource.Play();
+                _audioSource.PlayOneShot(_bombTick);
+                _audioSource.volume = 100;
                 _seconds = 59;
             }
         }
@@ -129,7 +130,6 @@ public class Bombo : MonoBehaviour
     public IEnumerator BombDefused()
     {
         int repeats = 4;
-
 
         for (int i = 0; i < repeats; i++)
         {
