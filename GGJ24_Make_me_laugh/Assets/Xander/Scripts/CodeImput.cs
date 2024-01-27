@@ -135,6 +135,7 @@ public class CodeImput : MonoBehaviour
         if (inputCodeString == correctCode)
         {
             Debug.Log("CORRECT");
+            PlayerPrefs.SetInt("BombaClear", 2);
             previousSprite.sprite = newSprite;
             previousSprite.transform.position = new Vector3(1, 3, (float)23.47);
             bombo._BombHasBeenDefused = true;

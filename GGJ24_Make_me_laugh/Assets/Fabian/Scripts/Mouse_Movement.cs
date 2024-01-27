@@ -45,8 +45,11 @@ public class Mouse_Movement : MonoBehaviour
             {
                 SceneManager.LoadScene(3);
             }
-            else if (gameObject.CompareTag("SouthDoor"))
+            else if (gameObject.CompareTag("SouthDoor") && PlayerPrefs.GetInt("Victory") == 99)
             {
+                PlayerPrefs.SetInt("HorrorClear", 389);
+                PlayerPrefs.SetInt("BombaClear", 389);
+                PlayerPrefs.SetInt("GrandmaClear", 389);
                 SceneManager.LoadScene(5);
             }
             else if (gameObject.CompareTag("WestDoor"))
@@ -65,15 +68,21 @@ public class Mouse_Movement : MonoBehaviour
         
         if (SceneManager.GetActiveScene().buildIndex == 4)
         {
-            if (gameObject.CompareTag("ChefsKnife"))
+            if (gameObject.CompareTag("Key"))
             {
                 keysCollected++;
                 Destroy(gameObject);
                 if (keysCollected >= 3)
                 {
+                    PlayerPrefs.SetInt("GrandmaClear", 3);
                     roomMasterScript.room2Clear = true;
                 }
             }
+        }
+
+        if (gameObject.CompareTag("ExitDoor") && keysCollected >= 3)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }
