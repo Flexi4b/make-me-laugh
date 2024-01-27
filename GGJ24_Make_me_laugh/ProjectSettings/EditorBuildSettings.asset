@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Room 3.unity
     guid: 03c7921603a2e6a4ca36b391bca35ef8
   - enabled: 1
+    path: Assets/Damian/ENDCUTSCENE.unity
+    guid: 6c2a6569609493246987a1a87bdf6186
+  - enabled: 1
     path: Assets/Scenes/You Won.unity
     guid: 2f3431c3bec95c543bc1738953845f25
   m_configObjects: {}
