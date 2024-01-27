@@ -54,5 +54,13 @@ public class Mouse_Movement : MonoBehaviour
                 //functie met dingen die het moet doen met klik
             }
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            if (gameObject.CompareTag("SouthDoor"))
+            {
+                SceneManager.LoadScene(1);
+            }
+        }
     }
 }

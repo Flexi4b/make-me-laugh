@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 64512890}
   - component: {fileID: 64512891}
   - component: {fileID: 64512892}
+  - component: {fileID: 64512893}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -387,6 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca60ed976ae0da9459e895b2410de8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousSprite: {fileID: 5518131628423954469}
+  newSprite: {fileID: 21300000, guid: 9cb144c8d104c6d42877d0ebf2bf6d10, type: 3}
   numberslottext0: {fileID: 0}
   numberslottext1: {fileID: 0}
   numberslottext2: {fileID: 0}
@@ -394,6 +397,18 @@ MonoBehaviour:
   numberslottext4: {fileID: 1161200067}
   numberslottext5: {fileID: 1775134688}
   inputCode: {fileID: 1161367532}
+--- !u!114 &64512893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64512886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4babfce4b26f1641bc1be233f4925a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &68380134
 GameObject:
   m_ObjectHideFlags: 0
@@ -5651,6 +5666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 1672801223726123464, guid: d9e609327dc405749afdcd65f2a4aa06, type: 3}
+      propertyPath: m_TagString
+      value: SouthDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 6094187602448970320, guid: d9e609327dc405749afdcd65f2a4aa06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8
@@ -5792,6 +5811,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 291635836}
   m_SourcePrefab: {fileID: 100100000, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
+--- !u!212 &5518131628423954469 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7797889967992443109, guid: beef90b11b8b4a542b6b51b82a33e569, type: 3}
+  m_PrefabInstance: {fileID: 5518131628423954468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

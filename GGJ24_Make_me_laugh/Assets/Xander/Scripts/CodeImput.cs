@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Linq;
 using TMPro;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class CodeImput : MonoBehaviour
 {
+    private Bombo bombo;
+    private RoomMasterScript roomMasterScript;
     private int numbercodeslot0;
     private int numbercodeslot1;
     private int numbercodeslot2;
@@ -13,6 +16,8 @@ public class CodeImput : MonoBehaviour
     private int numbercodeslot4;
     private int numbercodeslot5;
 
+   [SerializeField] public SpriteRenderer previousSprite;
+   [SerializeField] public Sprite newSprite;
    [SerializeField] private TextMeshPro numberslottext0;
    [SerializeField] private TextMeshPro numberslottext1;
    [SerializeField] private TextMeshPro numberslottext2;
@@ -26,6 +31,8 @@ public class CodeImput : MonoBehaviour
 
     private void Start()
     {
+        bombo = FindObjectOfType<Bombo>();
+        roomMasterScript = FindObjectOfType<RoomMasterScript>();
         numberslottext3.SetText("0");
         numberslottext4.SetText("0");
         numberslottext5.SetText("0");
@@ -129,6 +136,10 @@ public class CodeImput : MonoBehaviour
         if (inputCodeString == correctCode)
         {
             Debug.Log("CORRECT");
+            previousSprite.sprite = newSprite;
+            previousSprite.transform.position = new Vector3(1, 3, (float)23.47);
+            bombo._BombHasBeenDefused = true;
+            roomMasterScript.room1Clear = true;
         }
         else
         {
