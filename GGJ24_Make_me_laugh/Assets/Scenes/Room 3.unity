@@ -1733,6 +1733,7 @@ GameObject:
   - component: {fileID: 1113781904}
   - component: {fileID: 1113781907}
   - component: {fileID: 1113781908}
+  - component: {fileID: 1113781909}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1808,7 +1809,7 @@ Transform:
   m_GameObject: {fileID: 1113781903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.04, z: -10}
+  m_LocalPosition: {x: 0, y: 3.18, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1839,6 +1840,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4babfce4b26f1641bc1be233f4925a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keysCollected: 0
+--- !u!114 &1113781909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113781903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6341e234b1675bf41807bf6aad1054eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room1Clear: 0
+  room2Clear: 0
+  room3Clear: 0
 --- !u!1 &1120496170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,6 +2362,34 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1123402648}
   m_SourcePrefab: {fileID: 100100000, guid: 4a8de2a17941e6c42875446d686282fb, type: 3}
+--- !u!1 &1432505434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
+  m_PrefabInstance: {fileID: 1505468036}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1432505436
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432505434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1450589295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2414,6 +2459,34 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6882552c764f0934290264ea072ba7ee, type: 3}
+--- !u!1 &1482382054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
+  m_PrefabInstance: {fileID: 1774289750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1482382056
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482382054}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1505468036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2428,7 +2501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_TagString
-      value: VerifyButton
+      value: ChefsKnife
       objectReference: {fileID: 0}
     - target: {fileID: 8029401531407235485, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_LocalScale.x
@@ -2485,7 +2558,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1432505436}
   m_SourcePrefab: {fileID: 100100000, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
 --- !u!1001 &1507108936
 PrefabInstance:
@@ -3275,7 +3351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_TagString
-      value: VerifyButton
+      value: ChefsKnife
       objectReference: {fileID: 0}
     - target: {fileID: 8029401531407235485, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_LocalScale.x
@@ -3291,15 +3367,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8029401531407235485, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7
+      value: -6.45
       objectReference: {fileID: 0}
     - target: {fileID: 8029401531407235485, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.345
+      value: 4.44
       objectReference: {fileID: 0}
     - target: {fileID: 8029401531407235485, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.688
+      value: -10.59
       objectReference: {fileID: 0}
     - target: {fileID: 8029401531407235485, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3332,7 +3408,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1482382056}
   m_SourcePrefab: {fileID: 100100000, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
 --- !u!1001 &1775858837
 PrefabInstance:
@@ -3348,7 +3427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_TagString
-      value: VerifyButton
+      value: ChefsKnife
       objectReference: {fileID: 0}
     - target: {fileID: 8029401531407235485, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
       propertyPath: m_LocalScale.x
@@ -3405,7 +3484,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078184838}
   m_SourcePrefab: {fileID: 100100000, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
 --- !u!1001 &1809136081
 PrefabInstance:
@@ -3701,6 +3783,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 417023617}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &2078184836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7216449449284936487, guid: 07e0524847ded714a8a338d665e92cec, type: 3}
+  m_PrefabInstance: {fileID: 1775858837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &2078184838
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078184836}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2127527260
 PrefabInstance:
   m_ObjectHideFlags: 0

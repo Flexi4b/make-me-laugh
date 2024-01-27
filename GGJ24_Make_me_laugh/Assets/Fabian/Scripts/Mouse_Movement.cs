@@ -4,8 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Mouse_Movement : MonoBehaviour
 {
+    private RoomMasterScript roomMasterScript;
+    public int keysCollected = 0;
     void Update()
-    { 
+    {
         OnMouseClick();
     }
 
@@ -62,12 +64,18 @@ public class Mouse_Movement : MonoBehaviour
                 SceneManager.LoadScene(1);
             }
         }
-
+        
         if (SceneManager.GetActiveScene().buildIndex == 5)
         {
-            if (gameObject.CompareTag("VerifyButton"))
+            if (gameObject.CompareTag("ChefsKnife"))
             {
-                SceneManager.LoadScene(1);
+                keysCollected++;
+                Destroy(gameObject);
+                if (keysCollected >= 3)
+                {
+                    roomMasterScript = FindObjectOfType<RoomMasterScript>();
+                    roomMasterScript.room2Clear = true;
+                }
             }
         }
     }
