@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Billy2
+  m_Name: Wall_3
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -28,7 +28,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 06f90f56243ae69469c4e6969f03f74f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 96f1a29ee7bd2c84f8d1cc423062cca4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -44,15 +44,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: f8b333ea4243bf6498fe18fb239fcf2c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 80ebfd49b5684604a96ceff456dd2c15, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3b7b2771e2d2e6d48a2f0b8c5ad4e616, type: 3}
+        m_Texture: {fileID: 2800000, guid: f940a80f1ae5d6d43a8c94ca7b3b4ec9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: a7f11b2e61b354043acc71775c25b805, type: 3}
+        m_Texture: {fileID: 2800000, guid: ffe53c8be4fe8a74ea6fd6ca14f2dad0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 31c59efdb4aac20449c76d526826c176, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ad7a74344c97644193b57147da9e2f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -69,7 +69,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 1
+    - _GlossMapScale: 0.8
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
