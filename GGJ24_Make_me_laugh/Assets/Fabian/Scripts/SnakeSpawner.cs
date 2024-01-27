@@ -6,8 +6,7 @@ public class SnakeSpawner : MonoBehaviour
 {
     public GameObject SnakePrefab;
 
-    public GameObject SpawnpointSnake;
-    public GameObject[] WaypointsSnake;
+    public GameObject[] SpawnpointSnake;
 
     public bool FirstWaveBegin = true;
     public bool SecondWaveBegin = false;
@@ -28,7 +27,7 @@ public class SnakeSpawner : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                Instantiate(SnakePrefab, SpawnpointSnake.transform.position, SpawnpointSnake.transform.rotation);
+                Instantiate(SnakePrefab, SpawnpointSnake[Random.Range(0, SpawnpointSnake.Length)].transform.position, SpawnpointSnake[i].transform.rotation);
             }
 
             FirstWaveBegin = false;
@@ -44,7 +43,7 @@ public class SnakeSpawner : MonoBehaviour
         {
             for (int i = 0; i < 5; i++)
             {
-                Instantiate(SnakePrefab, SpawnpointSnake.transform.position, SpawnpointSnake.transform.rotation);
+                Instantiate(SnakePrefab, SpawnpointSnake[Random.Range(0, SpawnpointSnake.Length)].transform.position, SpawnpointSnake[i].transform.rotation);
             }
 
             SecondWaveBegin = false;
@@ -60,7 +59,7 @@ public class SnakeSpawner : MonoBehaviour
         {
             for (int i = 0; i < 8; i++)
             {
-                Instantiate(SnakePrefab, SpawnpointSnake.transform.position, SpawnpointSnake.transform.rotation);
+                Instantiate(SnakePrefab, SpawnpointSnake[Random.Range(0, SpawnpointSnake.Length)].transform.position, SpawnpointSnake[i].transform.rotation);
             }
 
             ThirdWaveBegin = false;
