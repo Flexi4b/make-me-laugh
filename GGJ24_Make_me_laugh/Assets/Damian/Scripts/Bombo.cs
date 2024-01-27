@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 public class Bombo : MonoBehaviour
 {
+    public static Bombo bombo;
 
     // Floats
 
@@ -44,6 +45,7 @@ public class Bombo : MonoBehaviour
 
     void Start()
     {
+        Bombo bombo = this;
         _timer = _selectedBombTime;
         _minutes = _timer / 60;
         _audioSource.clip = _bombTick;
@@ -124,7 +126,7 @@ public class Bombo : MonoBehaviour
         yield return null;
     }
 
-    private IEnumerator BombDefused()
+    public IEnumerator BombDefused()
     {
         int repeats = 4;
 

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Fabian/Scenes/Fabian_Room_1.unity
     guid: 6441461ca5270504499c8e41dd4daaaa
+  - enabled: 1
+    path: Assets/Fabian/Scenes/Horror_Room.unity
+    guid: 2fc5edb3dbdea2740a6313b422d51ea8
   m_configObjects: {}
