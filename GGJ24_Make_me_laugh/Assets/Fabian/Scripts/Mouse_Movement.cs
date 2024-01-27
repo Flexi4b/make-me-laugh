@@ -63,7 +63,7 @@ public class Mouse_Movement : MonoBehaviour
             }
         }
         
-        if (SceneManager.GetActiveScene().buildIndex == 5)
+        if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             if (gameObject.CompareTag("ChefsKnife"))
             {
