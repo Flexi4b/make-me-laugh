@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Mouse_Movement : MonoBehaviour
 {
     void Update()
-    {
+    { 
         OnMouseClick();
     }
 
