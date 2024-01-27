@@ -10,7 +10,10 @@ public class Mouse_Movement : MonoBehaviour
     {
         OnMouseClick();
     }
-
+    private void Start()
+    {
+        roomMasterScript = FindObjectOfType<RoomMasterScript>();
+    }
     private void OnMouseClick()
     {
         if (Input.GetMouseButtonDown(0))
@@ -29,35 +32,30 @@ public class Mouse_Movement : MonoBehaviour
 
     private void SelectedObject(GameObject gameObject)
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             if (gameObject.CompareTag("NorthDoor"))
             {
-                SceneManager.LoadScene(1);
+                if (roomMasterScript.room1Clear == false)
+                {
+                    SceneManager.LoadScene(2);
+                }
             }
             else if (gameObject.CompareTag("EastDoor"))
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
             else if (gameObject.CompareTag("SouthDoor"))
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(4);
             }
             else if (gameObject.CompareTag("WestDoor"))
             {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(5);
             }
         }
 
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            if (gameObject.CompareTag(""))
-            {
-                //functie met dingen die het moet doen met klik
-            }
-        }
-
-        if (SceneManager.GetActiveScene().buildIndex == 4)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             if (gameObject.CompareTag("SouthDoor"))
             {
@@ -73,7 +71,6 @@ public class Mouse_Movement : MonoBehaviour
                 Destroy(gameObject);
                 if (keysCollected >= 3)
                 {
-                    roomMasterScript = FindObjectOfType<RoomMasterScript>();
                     roomMasterScript.room2Clear = true;
                 }
             }
