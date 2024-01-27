@@ -32,7 +32,7 @@ public class ChangeButtonsColor : MonoBehaviour
     {
         if (_snakeWaveOneDone)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 RandomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
                 RandomButtons.ToArray();
@@ -50,7 +50,7 @@ public class ChangeButtonsColor : MonoBehaviour
             //{
             //    BloodyButtons[i].GetComponent<MeshRenderer>().material = BloodyMat;
             //}
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 8; i++)
             {
                 RandomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
                 RandomButtons.ToArray();
@@ -69,7 +69,7 @@ public class ChangeButtonsColor : MonoBehaviour
                 BloodyButtons[i].GetComponent<MeshRenderer>().material = BloodyMat;
             }
 
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 12; i++)
             {
                 RandomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
                 RandomButtons.ToArray();
