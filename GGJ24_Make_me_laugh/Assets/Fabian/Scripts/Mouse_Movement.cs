@@ -62,5 +62,13 @@ public class Mouse_Movement : MonoBehaviour
                 SceneManager.LoadScene(1);
             }
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            if (gameObject.CompareTag("VerifyButton"))
+            {
+                SceneManager.LoadScene(1);
+            }
+        }
     }
 }
