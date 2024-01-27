@@ -20,7 +20,7 @@ public class CodeImput : MonoBehaviour
    [SerializeField] private TextMeshPro numberslottext4;
    [SerializeField] private TextMeshPro numberslottext5;
 
-    private string correctCode = "681";
+    private string correctCode = "661";
     private string inputCodeString;
    [SerializeField] private TextMeshPro inputCode;
 
