@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7175143082220909633}
   - component: {fileID: 5101926930907175843}
   m_Layer: 0
-  m_Name: DoorNorth
-  m_TagString: NorthDoor
+  m_Name: ExitDoor
+  m_TagString: ExitDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

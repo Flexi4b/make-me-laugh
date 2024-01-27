@@ -27,6 +27,8 @@ TagManager:
   - Spatula
   - ChefsKnife
   - Snake
+  - Key
+  - ExitDoor
   layers:
   - Default
   - TransparentFX

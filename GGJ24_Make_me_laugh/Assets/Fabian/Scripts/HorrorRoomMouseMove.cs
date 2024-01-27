@@ -110,8 +110,17 @@ public class HorrorRoomMouseMove : MonoBehaviour
             if (ButtonsPressed >= 6)
             {
                 HorrorRoomCleard = true;
+                if (HorrorRoomCleard == true)
+                {
+                    PlayerPrefs.SetInt("HorrorClear", 1);
+                }
                 ButtonsPressed = 0;
             }
+        }
+
+        if (gameObject.CompareTag("ExitDoor") && HorrorRoomCleard)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }
