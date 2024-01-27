@@ -15,6 +15,18 @@ TagManager:
   - Spigot4
   - Spigot5
   - VerifyButton
+  - BloodyButtons
+  - ButtonUp3
+  - ButtonDown1
+  - ButtonUp2
+  - ButtonUp1
+  - ButtonDown3
+  - ButtonDown2
+  - Verify
+  - ButcherKnife
+  - Spatula
+  - ChefsKnife
+  - Snake
   layers:
   - Default
   - TransparentFX
