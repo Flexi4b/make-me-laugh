@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 96446737}
   - component: {fileID: 96446736}
   - component: {fileID: 96446735}
+  - component: {fileID: 96446738}
   m_Layer: 0
   m_Name: ButtonCenterMiddle
   m_TagString: BloodyButtons
@@ -228,6 +229,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96446733}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &96446738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96446733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
+--- !u!1 &159813801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159813802}
+  m_Layer: 0
+  m_Name: SnakeSpawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &159813802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159813801}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: 3, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1330324858}
+  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!1 &272223375
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +285,7 @@ GameObject:
   - component: {fileID: 272223379}
   - component: {fileID: 272223378}
   - component: {fileID: 272223377}
+  - component: {fileID: 272223380}
   m_Layer: 0
   m_Name: ButtonCenterLeft
   m_TagString: BloodyButtons
@@ -333,6 +379,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272223375}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &272223380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272223375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
 --- !u!1 &359064690
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +404,7 @@ GameObject:
   - component: {fileID: 359064694}
   - component: {fileID: 359064693}
   - component: {fileID: 359064692}
+  - component: {fileID: 359064695}
   m_Layer: 0
   m_Name: ButtonBottomRight
   m_TagString: BloodyButtons
@@ -438,6 +498,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359064690}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &359064695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359064690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
 --- !u!1 &451018323
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +523,7 @@ GameObject:
   - component: {fileID: 451018327}
   - component: {fileID: 451018326}
   - component: {fileID: 451018325}
+  - component: {fileID: 451018328}
   m_Layer: 0
   m_Name: ButtonBottomMiddle
   m_TagString: BloodyButtons
@@ -543,63 +617,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451018323}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &469329575
-PrefabInstance:
+--- !u!114 &451018328
+MonoBehaviour:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451018323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
+--- !u!1 &505139915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 505139916}
+  m_Layer: 0
+  m_Name: SnakeWaypoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &505139916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505139915}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2935573390130647658, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8888904411304555483, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
-      propertyPath: m_Name
-      value: Main Camera (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4bb1416953fe6764ea75a9ab1fafd0bd, type: 3}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: -3.75, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1330324858}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!1 &527439578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527439579}
+  m_Layer: 0
+  m_Name: SnakeWaypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527439579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527439578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -4.75, y: -3.75, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1330324858}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!1 &530275766
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +704,7 @@ GameObject:
   - component: {fileID: 530275770}
   - component: {fileID: 530275769}
   - component: {fileID: 530275768}
+  - component: {fileID: 530275771}
   m_Layer: 0
   m_Name: ButtonTopMiddle
   m_TagString: BloodyButtons
@@ -705,6 +798,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530275766}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &530275771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530275766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
 --- !u!1 &540640631
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +823,7 @@ GameObject:
   - component: {fileID: 540640635}
   - component: {fileID: 540640634}
   - component: {fileID: 540640633}
+  - component: {fileID: 540640636}
   m_Layer: 0
   m_Name: ButtonBottomLeft
   m_TagString: BloodyButtons
@@ -810,6 +917,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540640631}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &540640636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540640631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
 --- !u!1 &668503280
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +942,7 @@ GameObject:
   - component: {fileID: 668503284}
   - component: {fileID: 668503283}
   - component: {fileID: 668503282}
+  - component: {fileID: 668503285}
   m_Layer: 0
   m_Name: ButtonCenterRight
   m_TagString: BloodyButtons
@@ -915,6 +1036,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668503280}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &668503285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668503280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
+--- !u!1 &784209132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784209133}
+  m_Layer: 0
+  m_Name: SnakeWaypoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &784209133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784209132}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 4.75, y: -3.75, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1330324858}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!1001 &824086932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1024,6 +1189,147 @@ Transform:
   - {fileID: 359064691}
   m_Father: {fileID: 3694898684878596319}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1330324856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1330324858}
+  - component: {fileID: 1330324857}
+  m_Layer: 0
+  m_Name: SnakeWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1330324857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330324856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98c54946e8c7d44ebf16f7438307bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnakePrefab: {fileID: 8681473993422334015, guid: 823397d82a8a3a147afc339f017dd41a, type: 3}
+  SpawnpointSnake: {fileID: 159813801}
+  WaypointsSnake:
+  - {fileID: 527439578}
+  - {fileID: 505139915}
+  - {fileID: 784209132}
+  FirstWaveBegin: 1
+  SecondWaveBegin: 0
+  ThirdWaveBegin: 0
+--- !u!4 &1330324858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330324856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 12, z: 15.45}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1463938050}
+  - {fileID: 159813802}
+  - {fileID: 527439579}
+  - {fileID: 505139916}
+  - {fileID: 784209133}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1463938049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463938050}
+  - component: {fileID: 1463938052}
+  - component: {fileID: 1463938051}
+  m_Layer: 0
+  m_Name: Wall_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1463938050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463938049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.043901395, z: -0.051165964}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1330324858}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1463938051
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463938049}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 57bbf14e980a09343a528bf125849254, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1463938052
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463938049}
+  m_Mesh: {fileID: -5852286375780045605, guid: 07fec6f1d02bb3f439d3be7f56e99a79, type: 3}
 --- !u!1 &1729390729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1342,7 @@ GameObject:
   - component: {fileID: 1729390733}
   - component: {fileID: 1729390732}
   - component: {fileID: 1729390731}
+  - component: {fileID: 1729390734}
   m_Layer: 0
   m_Name: ButtonTopLeft
   m_TagString: BloodyButtons
@@ -1129,6 +1436,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729390729}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1729390734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729390729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
 --- !u!1 &1934754696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1555,7 @@ GameObject:
   - component: {fileID: 2085085638}
   - component: {fileID: 2085085637}
   - component: {fileID: 2085085636}
+  - component: {fileID: 2085085639}
   m_Layer: 0
   m_Name: ButtonTopRight
   m_TagString: BloodyButtons
@@ -1328,6 +1649,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085085634}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2085085639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085085634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cf3814f6ec794cb4d70dabd2aaab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonIsActive: 0
 --- !u!33 &167621271706111052
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1421,7 +1755,7 @@ GameObject:
   - component: {fileID: 5138652142091540293}
   m_Layer: 0
   m_Name: Knife_2
-  m_TagString: Untagged
+  m_TagString: ChefsKnife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1471,7 +1805,7 @@ GameObject:
   - component: {fileID: 2052408202236007411}
   m_Layer: 0
   m_Name: Spatula
-  m_TagString: Untagged
+  m_TagString: Spatula
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1503,9 +1837,10 @@ GameObject:
   - component: {fileID: 1474576905185915948}
   - component: {fileID: 2583206313699244937}
   - component: {fileID: 305562241535971139}
+  - component: {fileID: 2583206313699244938}
   m_Layer: 0
   m_Name: Knife_2
-  m_TagString: Untagged
+  m_TagString: ChefsKnife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1518,6 +1853,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2251077767022620310}
   m_Mesh: {fileID: -8976796912754869096, guid: 2aa06963a2f6b564db3f43dde1ef7187, type: 3}
+--- !u!65 &2583206313699244938
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251077767022620310}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0036986396, y: 0.022634324, z: 0.0008140232}
+  m_Center: {x: 2.910383e-11, y: 0, z: 0}
 --- !u!4 &2602978162732381360
 Transform:
   m_ObjectHideFlags: 0
@@ -1617,6 +1973,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &2935573390237037773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888904411163432316}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 12.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3410476667103309322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,7 +2106,7 @@ GameObject:
   - component: {fileID: 6366832793791360039}
   m_Layer: 0
   m_Name: Knife_1
-  m_TagString: Untagged
+  m_TagString: ButcherKnife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1751,13 +2122,35 @@ GameObject:
   - component: {fileID: 3890082300206547945}
   - component: {fileID: 167621271706111052}
   - component: {fileID: 2717770511496476806}
+  - component: {fileID: 4519232008167676244}
   m_Layer: 0
   m_Name: Knife_1
-  m_TagString: Untagged
+  m_TagString: ButcherKnife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4519232008167676244
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4519232008167676243}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.005009563, y: 0.019381246, z: 0.0011910631}
+  m_Center: {x: -0.0000000027939677, y: 0.0000000037252903, z: -0.000000014901161}
 --- !u!1 &4593918902771157843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,6 +2227,57 @@ Transform:
   - {fileID: 1474576905185915948}
   m_Father: {fileID: 1594260090743893138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &5545352004764623757
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888904411163432316}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!4 &6128564352389834076
 Transform:
   m_ObjectHideFlags: 0
@@ -1849,6 +2293,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2052408202236007411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &6303879647007612867
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888904411163432316}
+  m_Enabled: 1
 --- !u!4 &6366832793791360039
 Transform:
   m_ObjectHideFlags: 0
@@ -1876,9 +2328,10 @@ GameObject:
   - component: {fileID: 6128564352389834076}
   - component: {fileID: 7107475552178432761}
   - component: {fileID: 4991716898783534643}
+  - component: {fileID: 7107475552178432762}
   m_Layer: 0
   m_Name: Spatula
-  m_TagString: Untagged
+  m_TagString: Spatula
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1891,6 +2344,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6793355004659974118}
   m_Mesh: {fileID: -4676188267520500942, guid: 5b5d584d3a7363e4a9aa968f735f5be3, type: 3}
+--- !u!65 &7107475552178432762
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6793355004659974118}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0046618376, y: 0.022415813, z: 0.00040867814}
+  m_Center: {x: 0.0000000027939677, y: 0.0000000037252903, z: 0}
 --- !u!1 &8685799680727635166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,21 +2409,71 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a6bf57830dd0d5f49acb482c628b41cc, type: 2}
   - {fileID: 2100000, guid: e5d5518c18a719d468a056e81d8ed060, type: 2}
   - {fileID: 2100000, guid: 52f0e97ef41aa8f48acc14a62bd03726, type: 2}
-  _Black: {fileID: 2100000, guid: d6334aaca349b2b4ea49f50b9e0e3d71, type: 2}
-  _Bloody: {fileID: 2100000, guid: cd77c078ee92986478dd88e45e52d131, type: 2}
-  _randomButtons: []
+  RandomButtons: []
+  HorrorRoomCleard: 0
   _snakeWaveOneDone: 0
   _snakeWaveTwoDone: 0
-  _snakeWaveThreeDone: 1
-  _colorWaveOneDone: 0
-  _colorWaveTwoDone: 1
-  _colorWaveThreeDone: 0
+  _snakeWaveThreeDone: 0
+  ColorWaveOneDone: 0
+  ColorWaveTwoDone: 0
+  ColorWaveThreeDone: 0
+  BlackMat: {fileID: 2100000, guid: d6334aaca349b2b4ea49f50b9e0e3d71, type: 2}
+  BloodyMat: {fileID: 2100000, guid: cd77c078ee92986478dd88e45e52d131, type: 2}
+--- !u!1 &8888904411163432316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2935573390237037773}
+  - component: {fileID: 5545352004764623757}
+  - component: {fileID: 6303879647007612867}
+  - component: {fileID: 8888904411163432318}
+  - component: {fileID: 8888904411163432317}
+  m_Layer: 0
+  m_Name: Main Camera (1)
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &8888904411163432317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888904411163432316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8827defff587d80409251b38d3270dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraDelay: 0.65
+--- !u!114 &8888904411163432318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888904411163432316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b90d3944239bf440994e90de5c53a78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponEquiped: 0
+  SnakesDestroyed: 0
+  ButtonsPressed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 469329575}
+  - {fileID: 2935573390237037773}
   - {fileID: 1934754698}
   - {fileID: 824086932}
   - {fileID: 1594260090743893138}
   - {fileID: 3694898684878596319}
+  - {fileID: 1330324858}

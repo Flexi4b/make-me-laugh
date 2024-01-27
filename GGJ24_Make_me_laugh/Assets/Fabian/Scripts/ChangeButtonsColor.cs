@@ -6,75 +6,77 @@ public class ChangeButtonsColor : MonoBehaviour
 {
     public GameObject[] BloodyButtons;
     public Material[] Materials;
+    public List<GameObject> RandomButtons;
 
-    public Material Black;
-    public Material Bloody;
-    private List<GameObject> _randomButtons;
-    //private List<GameObject> _tempButtons;
-
-    [SerializeField] private bool _snakeWaveOneDone = true;
-    [SerializeField] private bool _snakeWaveTwoDone = false;
-    [SerializeField] private bool _snakeWaveThreeDone = false;
+    public bool _snakeWaveOneDone = false;
+    public bool _snakeWaveTwoDone = false;
+    public bool _snakeWaveThreeDone = false;
 
     public bool ColorWaveOneDone = false;
     public bool ColorWaveTwoDone = false;
     public bool ColorWaveThreeDone = false;
 
+    public Material BlackMat;
+    public Material BloodyMat;
+
+    private HorrorRoomMouseMove HRMM;
+    private SnakeSpawner _snakeSpawner;
+
+    private void Start()
+    {
+        HRMM = FindObjectOfType<HorrorRoomMouseMove>();
+        _snakeSpawner = FindObjectOfType<SnakeSpawner>();
+    }
+
     void Update()
     {
-        if (_snakeWaveOneDone == true)
+        if (_snakeWaveOneDone)
         {
             for (int i = 0; i < 3; i++)
             {
-                _randomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
-                _randomButtons.ToArray();
-                _randomButtons[i].GetComponent<ButtonActive>().ButtonIsActive = true;
-                //_tempButtons.Add(_randomButtons[i]);
-                //_tempButtons.ToArray();
-                _randomButtons[i].GetComponent<MeshRenderer>().material = Materials[Random.Range(0, Materials.Length)];
+                RandomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
+                RandomButtons.ToArray();
+                RandomButtons[i].GetComponent<ButtonActive>().ButtonIsActive = true;
+                RandomButtons[i].GetComponent<MeshRenderer>().material = Materials[Random.Range(0, Materials.Length)];
             }
 
-            //for (int j = 0; j < 3; j++)
-            //{
-            //    foreach (GameObject gameObject in _randomButtons)
-            //    {
-            //        if (gameObject == _tempButtons[j])
-            //        {
-            //            _randomButtons
-            //        }
-            //        else
-            //        {
-            //            return;
-            //        }
-            //    }
-            //}
-
-
-            
             _snakeWaveOneDone = false;
             ColorWaveOneDone = true;
         }
 
-        if (_snakeWaveTwoDone && ColorWaveOneDone)
+        if (_snakeWaveTwoDone)
         {
+            //for (int i = 0; i < BloodyButtons.Length; i++)
+            //{
+            //    BloodyButtons[i].GetComponent<MeshRenderer>().material = BloodyMat;
+            //}
             for (int i = 0; i < 6; i++)
             {
-                _randomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
-                _randomButtons.ToArray();
-                _randomButtons[i].GetComponent<MeshRenderer>().material = Materials[Random.Range(0, Materials.Length)];
+                RandomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
+                RandomButtons.ToArray();
+                RandomButtons[i].GetComponent<ButtonActive>().ButtonIsActive = true;
+                RandomButtons[i].GetComponent<MeshRenderer>().material = Materials[Random.Range(0, Materials.Length)];
             }
+
             _snakeWaveTwoDone = false;
             ColorWaveTwoDone = true;
         }
 
-        if (_snakeWaveThreeDone && ColorWaveTwoDone)
+        if (_snakeWaveThreeDone)
         {
+            for (int i = 0; i < BloodyButtons.Length; i++)
+            {
+                BloodyButtons[i].GetComponent<MeshRenderer>().material = BloodyMat;
+            }
+
             for (int i = 0; i < 9; i++)
             {
-                _randomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
-                _randomButtons.ToArray();
-                _randomButtons[i].GetComponent<MeshRenderer>().material = Materials[Random.Range(0, Materials.Length)];
+                RandomButtons.Add(BloodyButtons[Random.Range(0, BloodyButtons.Length)]);
+                RandomButtons.ToArray();
+                RandomButtons[i].GetComponent<ButtonActive>().ButtonIsActive = true;
+                RandomButtons[i].GetComponent<MeshRenderer>().material = Materials[Random.Range(0, Materials.Length)];
             }
+            
             _snakeWaveThreeDone = false;
             ColorWaveThreeDone = true;
         }
