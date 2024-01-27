@@ -3787,6 +3787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7905608218218970072, guid: 3b8cdebbd7f1bb74190e66c0c78ec251, type: 3}
+      propertyPath: m_TagString
+      value: NorthDoor
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 958668992932416852, guid: 3b8cdebbd7f1bb74190e66c0c78ec251, type: 3}
     m_RemovedGameObjects: []
