@@ -47,11 +47,11 @@ public class Mouse_Movement : MonoBehaviour
             }
             else if (gameObject.CompareTag("SouthDoor"))
             {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(6);
             }
             else if (gameObject.CompareTag("WestDoor"))
             {
-                SceneManager.LoadScene(5);
+                SceneManager.LoadScene(4);
             }
         }
 
